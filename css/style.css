@@ -202,7 +202,12 @@ a {
 /*stilizare pentru prices*/
 .services {
   background-color: var(--black);
-  background-image: url(../images/hero-bg-image.jpg);
+  background-image: linear-gradient(
+      0deg,
+      rgba(25, 28, 38, 0.3),
+      rgba(25, 28, 38, 0.8)
+    ),
+    url(../images/hero-bg-image.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 130px;
@@ -256,6 +261,19 @@ a {
   margin-top: 48px;
 }
 /*stilizare pentru reviews*/
+.reviews .container {
+  display: flex;
+  padding-top: 130px;
+}
+.reviews__list {
+  display: flex;
+  flex: 1;
+}
+.reviews__list2 {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
 .reviews__number {
   font-size: 42px;
   font-family: var(--primary-font);
@@ -274,12 +292,23 @@ a {
   line-height: 14px;
   color: var(--black);
 }
+.reviews__subtitle::before {
+  content: '';
+  background-color: var(--black);
+  width: 60px;
+  height: 1px;
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 7px;
+}
 .reviews__title {
   font-size: 42px;
   font-family: var(--secondary-font);
   font-weight: 700;
   line-height: 49px;
   color: #303030;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .reviews__text {
   font-size: 18px;
@@ -288,8 +317,220 @@ a {
   line-height: 30px;
   color: #555555;
 }
+/*stilizare pt sec our barbers*/
+
+.barbers .container {
+  display: flex;
+  flex-direction: column;
+  background-color: #f7f7f7;
+}
+.barbers__subtitle::before {
+  content: '';
+  background-color: var(--black);
+  width: 60px;
+  height: 1px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 7px;
+}
+.barbers__subtitle {
+  font-family: var(--primary-font);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 14px;
+  color: var(--black);
+}
+.barbers__title {
+  font-family: var(--secondary-font);
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 49px;
+  color: var(--black);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 20px;
+}
+.barbers__cards {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+.barbers__img {
+  width: 370px;
+  height: 346px;
+}
+.barbers__card {
+  text-align: center;
+  font-family: var(--primary-font);
+  font-weight: 400;
+  padding-top: 40px;
+}
+
+.barbers__name {
+  padding-top: 30px;
+  padding-left: 8px;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--black);
+}
+.barbers__info {
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--orange);
+}
+.barbers__social {
+  display: flex;
+  gap: 10px;
+  margin-top: 30px;
+  justify-content: center;
+}
+.barbers__social li {
+  background-color: var(--white);
+  padding: 12px;
+  border-radius: 100%;
+}
+.barbers__social li :hover .icon {
+  fill: var(--orange);
+}
+
+.barbers__card {
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/*stilizare pt sec our place*/
+.our-place .container {
+  display: flex;
+  padding-top: 130px;
+  padding-bottom: 130px;
+  flex-direction: column;
+}
+.our-place__subtitle::before {
+  content: '';
+  width: 60px;
+  height: 1px;
+  display: inline-block;
+  background-color: var(--black);
+  vertical-align: middle;
+  margin-right: 7px;
+}
+.our-place__subtitle {
+  font-family: var(--primary-font);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 14px;
+  color: var(--black);
+}
+.our-place__imagine {
+  display: flex;
+  gap: 30px;
+}
+/*stilizare pt sec contact*/
+.contact {
+  color: var(--white);
+  display: flex;
+  background-color: #171a24;
+  padding-top: 130px;
+}
+
+.contact__form {
+  flex: 1;
+}
+.contact__info {
+  flex: 1;
+  background-color: var(--black);
+  background-image: linear-gradient(
+      rgba(25, 28, 38, 0.9),
+      rgba(25, 28, 38, 0.9)
+    ),
+    url(../images/contact-bg-image.jpg);
+}
+.contact__title {
+  font-family: var(--secondary-font);
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 49px;
+  color: var(--white);
+  padding-bottom: 40px;
+}
+.contact__adress {
+  font-family: var(--primary-font);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  color: var(--light-black);
+  padding-bottom: 20px;
+}
+.contact__subtitle {
+  padding-top: 70px;
+  padding-bottom: 20px;
+  font-family: var(--primary-font);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 14px;
+  color: var(--white);
+}
+.contact__subtitle::before {
+  content: '';
+  background-color: var(--black);
+  width: 60px;
+  height: 1px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 7px;
+}
+.contact__opening {
+  font-family: var(--primary-font);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  color: var(--light-black);
+  padding-bottom: 130px;
+}
+/*stilizare pt footer*/
+.footer .container {
+  display: flex;
+  padding: 56px 0 56px 0;
+}
+.footer {
+  font-family: var(--primary-font);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 14px;
+  flex: 1;
+}
+.footer p {
+  display: flex;
+  flex: 1;
+  padding-left: 55px;
+}
+.footer__list {
+  display: flex;
+  flex: 1;
+  padding-left: 773px;
+  gap: 40px;
+}
+.footer__list::before {
+  content: '';
+  display: inline;
+  vertical-align: middle;
+  background-color: var(--black);
+  width: 60px;
+  height: 1px;
+  margin-right: 7px;
+}
 .container {
   width: 1200px;
   margin-right: auto;
   margin-left: auto;
+}
+.icon {
+  width: 20px;
+  height: 20px;
 }
